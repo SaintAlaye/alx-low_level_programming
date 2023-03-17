@@ -1,14 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- * Printing using the puts function
- * *Programming is like building a multilingual puzzle
- * Return : always 0 (success)
+ * main - This uses program prints exactly the string
+ * "Programming is like building a multilingual puzzle
+ * followed by a new line.
+ * Return: always 0 (Success)
  */
 int main(void)
 {
 	char myStr[] = "\"Programming is like building a multilingual puzzle";
+
 	puts(myStr);
 
 	return (0);
