@@ -13,7 +13,8 @@ int main(void)
 
 	/* write the character to stdout */
 	for (lower_Case = 'a'; lower_Case <= 'z'; lower_Case++)
-		putchar(lower_Case\n);
+		putchar(lower_Case);
+	putchar('\n');
 
 	return (0);
 }
