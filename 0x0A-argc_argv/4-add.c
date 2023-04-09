@@ -1,33 +1,36 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
- * main - A function that add multiple numbers
- * @argv: array of strings in command line
- * @argc: counts of arguments passed
- * Return: 0 Success
+ * main - add 2 positive numbers and print the result
+ * @argc: argument count
+ * @argv: argument vector, array of strings
+ * Description: If no number is passed to program, print 0.
+ * Return: 1 if error, 0 if function runs properly.
  */
 
 int main(int argc, char *argv[])
 {
-	/* declaring the variables */
-	int fnum, snum, add = 0;
+	int total, i;
+	char *p;
+	int num;
 
-	/* iterating through the value */
-	for (fnum = 1;fnum < argc; fnum++)
+	total = 0;
+	if (argc > 1)
 	{
-		for (snum =0; argv[fnum][snum] !='\0'; snum++)
+		for (i = 1; argv[i]; i++)
 		{
-			if (!isdigit(argv[fnum][snum]))
+			num = strtol(argv[i], &p, 10);
+			if (!*p)
+				total += num;
+			else
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		add += atoi(argv[fnum]);
 	}
-	printf("%d\n", add);
+	printf("%d\n", total);
 	return (0);
 }
