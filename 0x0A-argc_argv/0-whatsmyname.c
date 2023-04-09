@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - A program that prints it own name
  * @argv: number of arrays of strings
