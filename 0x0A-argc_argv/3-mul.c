@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
- * main - a function that multiply 2 numbers
- * @agrc: number of argument count
- * @argv: arrays of strings of arguments
- * Return: 0 Success
+/**
+ * main - multiply 2 numbers passed to main, or Error
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 1 if error, 0 if function runs correctly
  */
 
 int main(int argc, char *argv[])
