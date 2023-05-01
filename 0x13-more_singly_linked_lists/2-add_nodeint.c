@@ -22,6 +22,8 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	/* conditional test */
 	if (new_Node == NULL)
 		return (NULL);
+	if (head == NULL)
+		return (NULL);
 
 	/* setting it Data and next pointer values */
 	new_Node->n = n; /* Data value */
