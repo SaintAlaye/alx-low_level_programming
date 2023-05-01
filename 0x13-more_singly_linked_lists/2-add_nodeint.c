@@ -24,8 +24,8 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		return (NULL);
 
 	/* setting it Data and next pointer values */
-	new_Node -> n = n; /* Data value */
-	new_Node -> next = *head; /* next pinter value */
+	new_Node->n = n; /* Data value */
+	new_Node->next = *head; /* next pinter value */
 	*head = new_Node;
 
 	return (*head);
