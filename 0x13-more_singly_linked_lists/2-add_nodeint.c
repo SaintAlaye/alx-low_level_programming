@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * 2-add_nodeint - add a new node at the beginning of a list
+ * add_nodeint - add a new node at the beginning of a list
  * @head: the list head
  * @n: number of element
  *
@@ -26,8 +26,8 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		return (NULL);
 
 	/* setting it Data and next pointer values */
-	new_Node->n = n; /* Data value */
-	new_Node->next = *head; /* next pinter value */
+	new_Node->n = n;
+	new_Node->next = *head;
 	*head = new_Node;
 
 	return (*head);
