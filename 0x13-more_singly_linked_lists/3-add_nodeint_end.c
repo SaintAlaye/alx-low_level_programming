@@ -19,26 +19,27 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	last = *head;
 
 	/* Adding the data and pointr values */
-	new_Node->n = n;
-	new_Node->next = NULL;
-
-	/* Conditional Test */
-
 	if (new_Node == NULL)
 		return (NULL);
+
+	new_Node->n = n;
+
+	if (head == NULL)
+		return (NULL);
+	if (last != NULL)
+		while (last->next != NULL)
+			last = last->next;
 
 	if (*head == NULL)
 	{
 		*head = new_Node;
+		new_Node->next = NULL;
 	}
 
 	else
 	{
-		while (last->next != NULL)
-		{
-			last = last->next;
-		}
 		last->next = new_Node;
+		new_Node->next = NULL;
 	}
 
 	return (new_Node);
