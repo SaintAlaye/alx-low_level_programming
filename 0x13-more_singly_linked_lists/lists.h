@@ -1,33 +1,17 @@
 #ifndef LISTH
 #define LISTH
-
+#include <stddef.h>
 /**
  * struct listint_s - singly linked list
  * @n: integer
- * @next: points to the next node
- *
+ * @next: points to next node
  * Description: singly linked list node structure
- *
  */
 typedef struct listint_s
 {
 	int n;
 	struct listint_s *next;
 } listint_t;
-
-/**
- * struct listp_s - single linked list struct
- * @p: pointer to nodes
- * @next: pointer to next node on the list
- *
- * Description: singly linked list of pointers
- */
-
-typedef struct listp_s
-{
-	void *p;
-	struct listp_s *next;
-} listp_t;
 
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
@@ -47,4 +31,3 @@ listint_t *find_listint_loop(listint_t *head);
 
 int _putchar(char c);
 #endif
-
